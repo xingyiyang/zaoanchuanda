@@ -35,6 +35,9 @@ def reset():
     
 def clearall():
     db.query("UPDATE morning_sign SET total=0,istoday=0,timetoday=NULL,record = 0  WHERE id >0")
+
+def clearIstoday():
+    db.query("UPDATE morning_sign SET istoday=0")
            
 def gettime(date):
     #得到时间
